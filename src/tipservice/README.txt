@@ -6,4 +6,4 @@ modifying this TipCalculator project to inject the
 calculator objects into the service class, and get a pre-configured service
 object from Spring.
 
-The techniques are virtually identical to lab1.
+The techniques are virtually identical to lab1.x
