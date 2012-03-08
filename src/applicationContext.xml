@@ -24,6 +24,19 @@
           http://www.springframework.org/schema/util/spring-util-2.5.xsd http://www.springframework.org/schema/util/spring-util-2.5.xsd/spring-spring-util-2.5.xsd-3.0.xsd
 ">
     
+    <bean id="tipCalc1" class="tipservice.FoodServiceTipCalculator" scope="prototype"> 
+    <constructor-arg name="q" value="FAIR"/>
+    <constructor-arg name="billAmt" value="125.0"/>    
+    </bean>
+    
+    <bean id="tipManager" class="tipservice.TipService" scope="prototype">
+    <constructor-arg name="tipCalculator" ref="tipCalc1"/>
+    </bean> 
+    
+    <bean id="tipCalc2" class="tipservice.BaggageServiceTipCalculator" scope="prototype">
+        <constructor-arg name="q" value="GOOD"/>
+        <constructor-arg name="bags" value="5"/>            
+    </bean>
     
 
 </beans>
